@@ -6,9 +6,6 @@ package independentcopy;
  * @author jlombardo
  */
 public class ReaderFactory {
-    public static enum Readers {
-        KEYBOARD, FILE
-    }
     
     private static ReaderFactory instance;
     
@@ -39,7 +36,7 @@ public class ReaderFactory {
      * Reader to create.
      * @return a Reader built to spec
      */
-    public Reader getReader(Readers readerType) {
+    public Reader getReader(AbstractFactory.Readers readerType) {
         Reader r = null;
         
         switch(readerType) {

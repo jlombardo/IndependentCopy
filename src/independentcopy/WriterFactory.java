@@ -5,10 +5,7 @@ package independentcopy;
  * 
  * @author jlombardo
  */
-public class WriterFactory {
-    public static enum Writers {
-        GUI, FILE
-    }
+public class WriterFactory extends AbstractFactory {
     
     private static WriterFactory instance;
     
@@ -39,7 +36,7 @@ public class WriterFactory {
      * Writer to create.
      * @return a Writer built to spec
      */
-    public Writer getWriter(Writers writerType) {
+    public Writer getWriter(AbstractFactory.Writers writerType) {
         Writer w = null;
         
         switch(writerType) {

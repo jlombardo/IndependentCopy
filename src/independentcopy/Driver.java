@@ -51,13 +51,11 @@ public class Driver {
 
 	public static void main(String[] args) {
             
-		Reader reader = ReaderFactory
-                        .getInstance()
-                        .getReader(ReaderFactory.Readers.KEYBOARD);
+		Reader reader = AbstractFactory
+                        .getReaderInstance(AbstractFactory.Readers.KEYBOARD);
                 
-		Writer writer = WriterFactory
-                        .getInstance()
-                        .getWriter(WriterFactory.Writers.GUI);
+		Writer writer = AbstractFactory
+                        .getWriterInstance(AbstractFactory.Writers.GUI);
 		
 		// Copy from reader to writer
 		// Notice that Copier is NOT dependent on implementation of reader/writer
