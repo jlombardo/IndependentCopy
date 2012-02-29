@@ -51,17 +51,13 @@ public class Driver {
 
 	public static void main(String[] args) {
             
-		// Uncomment this out (and comment following reader/writer)
-		// to see how switching objects causes no problems with
-		// Copier class because it's Polymorphic!!!
-//		Reader reader = new FileReader();
-//		Writer writer = new GuiWriter();
-
-		// Comment this out (and uncomment preceeding reader/writer)
-		// to see how switching objects causes no problems with
-		// Copier class because it's Polymorphic!!!
-		Reader reader = new KeyboardReader();
-		Writer writer = new GuiWriter();
+		Reader reader = ReaderFactory
+                        .getInstance()
+                        .getReader(ReaderFactory.Readers.KEYBOARD);
+                
+		Writer writer = WriterFactory
+                        .getInstance()
+                        .getWriter(WriterFactory.Writers.GUI);
 		
 		// Copy from reader to writer
 		// Notice that Copier is NOT dependent on implementation of reader/writer
