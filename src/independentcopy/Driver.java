@@ -50,7 +50,11 @@ package independentcopy;
 public class Driver {
 
 	public static void main(String[] args) {
+            // This is how newbies do it.
+//                ReaderFactory readerFactory = ReaderFactory.getInstance();
+//                Reader reader = readerFactory.getReader(ReaderFactory.Readers.KEYBOARD);
             
+            // This is an advanced technique that does the same thing.
 		Reader reader = ReaderFactory
                         .getInstance()
                         .getReader(ReaderFactory.Readers.KEYBOARD);
