@@ -16,17 +16,6 @@ import java.util.logging.Logger;
  * @author jlombardo
  */
 public abstract class AbstractFactory {
-    // Enums Moved to here for easy, centralized access
-
-    public static enum Readers {
-
-        KEYBOARD, FILE
-    }
-
-    public static enum Writers {
-
-        GUI, FILE
-    }
 
     public static Reader getReaderInstance() {
         Reader r = null;
