@@ -5,7 +5,7 @@ package independentcopy;
  * 
  * @author jlombardo
  */
-public class ReaderFactory {
+public class ReaderFactory extends AbstractFactory {
     
     private static ReaderFactory instance;
     
