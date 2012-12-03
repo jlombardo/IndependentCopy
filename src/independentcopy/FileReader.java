@@ -23,12 +23,13 @@ public class FileReader implements Reader {
 	 */
 	public String readln() {
 		// Do this if locating data file in project 
-//		File data = new File("build" + File.separator + "classes" 
-//                        + File.separator + "data.txt");
+		File data = new File("build" + File.separator + "classes" 
+                        + File.separator + "data.txt");
             
                 // Do this if locating data file outside of project (preferred)
-                // File is located at the root of the root drive (likely "E" in class)
-		File data = new File(File.separator + "data.txt");
+                // File is located at the root of the drive where the
+                // app is running (likely "E" for your USB drive in class)
+//		File data = new File(File.separator + "data.txt");
 
 		BufferedReader in = null;
 		String line = null;
