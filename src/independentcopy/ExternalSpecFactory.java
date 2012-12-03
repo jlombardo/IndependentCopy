@@ -8,20 +8,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * This AbstractFactory decouples the actual factories from the client class,
- * which in this case is the Driver class. This gives us the flexibility to
- * change our factory classes as well as the reader and writer classes without
- * breaking the client code.
+ * This ExternalSpecFactory decouples the specifications for building
+ * Reader and Writer objects from the Factory class. Instead, the specs are
+ * read from an external text file that has key=value pairs providing the
+ * specifications. Once read in, the factory class can build objects using
+ * Java Reflection techniques.
  *
  * @author jlombardo
  */
-public abstract class AbstractFactory {
+public abstract class ExternalSpecFactory {
 
     public static Reader getReaderInstance() {
         Reader r = null;
 
         // First read config setting in properties file
-        File file = new File("c:/temp/config.properties");
+        File file = new File("/temp/config.properties");
         Properties props = new Properties();
         FileInputStream inFile;
         try {
@@ -50,7 +51,7 @@ public abstract class AbstractFactory {
         Properties props = new Properties();
         FileInputStream inFile;
         try {
-            inFile = new FileInputStream("c:/temp/config.properties");
+            inFile = new FileInputStream("/temp/config.properties");
             props.load(inFile);
             inFile.close();
         
@@ -60,7 +61,7 @@ public abstract class AbstractFactory {
             w = (Writer)clazz.newInstance();
             
         } catch (Exception ex) {
-            Logger.getLogger(AbstractFactory.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExternalSpecFactory.class.getName()).log(Level.SEVERE, null, ex);
 
         }
         
