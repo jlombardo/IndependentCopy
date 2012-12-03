@@ -41,6 +41,10 @@ public class Driver {
 		// Copier class because it's Polymorphic!!!
 //		Reader reader = new FileReader();
 //		Writer writer = new GuiWriter();
+                // If using this writer, the file will be named 'datacopy.txt'
+                // and will be located at the root of the drive where the app
+                // is executing, and then under a directory named "Temp"
+//		Writer writer = new FileWriter();                
 		
 		// Copy from reader to writer
 		// Notice that Copier is NOT dependent on implementation of reader/writer
