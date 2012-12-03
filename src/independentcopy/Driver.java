@@ -2,9 +2,12 @@
 package independentcopy;
 
 /**
- * This example is the same one used earlier in the semester to demonstrate 
- * the DIP pattern. It's a very flexible design but still has dependency
- * issues. If you look at the Driver class you can see that we have 
+ * Note that there are 4 versions of this sample, each contained in a
+ * separate Git Branch: master, factory1, factory2 and factory3.
+ * <P>
+ * This example (master) is the same one used earlier in the semester to  
+ * demonstrate the DIP pattern. It's a very flexible design but still has 
+ * dependency issues. If you look at the Driver class you can see that we have 
  * rigidly defined the Reader and Writer implementations that are used. However,
  * major portions of this program do not suffer from such dependencies 
  * (the Copier class does not require changes to support 
