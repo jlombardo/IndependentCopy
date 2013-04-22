@@ -13,6 +13,10 @@ import java.util.logging.Logger;
  * read from an external text file that has key=value pairs providing the
  * specifications. Once read in, the factory class can build objects using
  * Java Reflection techniques.
+ * 
+ * IMPORTANT: to run this program you must place the config.properties file
+ * in the appropriate directory and then modify the file path below to
+ * use that directory.
  *
  * @author jlombardo
  */
