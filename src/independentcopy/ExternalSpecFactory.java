@@ -26,7 +26,8 @@ public abstract class ExternalSpecFactory {
         Reader r = null;
 
         // First read config setting in properties file
-        File file = new File("/temp/config.properties");
+//        File file = new File("/temp/config.properties");
+        File file = new File("src/config.properties");
         Properties props = new Properties();
         FileInputStream inFile;
         try {
@@ -55,7 +56,8 @@ public abstract class ExternalSpecFactory {
         Properties props = new Properties();
         FileInputStream inFile;
         try {
-            inFile = new FileInputStream("/temp/config.properties");
+//            inFile = new FileInputStream("/temp/config.properties");
+            inFile = new FileInputStream("src/config.properties");
             props.load(inFile);
             inFile.close();
         
