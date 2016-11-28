@@ -2,7 +2,7 @@
 package independentcopy;
 
 /**
- * This example is the final example of using the DIP pattern in combination
+ * This example is the 3rd example of using the DIP pattern in combination
  * with the Factory Pattern. In this example (branch factory3) the 
  * specifications for building Reader and Writer objects are stored in an
  * external file (config.properties). Please make sure this file exists in
