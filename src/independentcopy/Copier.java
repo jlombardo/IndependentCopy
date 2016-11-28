@@ -21,16 +21,12 @@ public class Copier {
 	private Writer writer;
 	
 	/**
-	 * Get a Reader and Writer object (interface types). Copying
-	 * ability is open to any number of implementations that implement 
-	 * those interfaces.
-         * 
-         * Both the Dependency Inversion Principle (DIP) and the Liskov
-         * Substitution Principle are highlighted here.
+	 * Get a Reader and Writer object (interface types). Encapsulate
+         * the object creation using a factory and an external specification.
 	 */
-	public Copier( Reader reader, Writer writer ) {
-		this.reader = reader;
-		this.writer = writer;
+	public Copier() {
+		this.reader = ExternalSpecFactory.getReaderInstance();
+		this.writer = ExternalSpecFactory.getWriterInstance();
 	}
 	
 	/**
